@@ -58,3 +58,63 @@ Initial commit:
 
 `29dae6e` - Start Week 2 bytecount lab
 
+\## Test Results
+
+
+
+| Test | Expected | Actual | Result |
+
+|---|---:|---:|---|
+
+| sample.txt (`abc\\n`) | 4 | 4 | PASS |
+
+| empty.txt | 0 | 0 | PASS |
+
+| missing.txt | exit 1 + error | exit 1 + error | PASS |
+
+| no argument | exit 2 + usage | exit 2 + usage | PASS |
+
+
+
+\## Build
+
+
+
+Compiler: GCC 15.2.0 (Ubuntu 15.2.0-16ubuntu1)
+
+
+
+Compile command:
+
+cc -std=c11 -Wall -Wextra -Werror -o bytecount bytecount.c
+
+
+
+\## What I Learned
+
+
+
+1\. `open()` returns a file descriptor used by `read()` and `close()`.
+
+2\. `read()` returns the number of bytes read; `0` means EOF and a negative value means an error.
+
+3\. stdout, stderr, and exit status are separate parts of a command-line program's interface.
+
+
+
+\## Git History
+
+
+
+Initial commit: 29dae6e — Start Week 2 bytecount lab
+
+Lab implementation commit: 25090f7 — Complete Week 2 bytecount lab
+
+
+
+\## Final Status
+
+
+
+The program compiles with `-Wall -Wextra -Werror` and passes the four mandatory tests.
+
